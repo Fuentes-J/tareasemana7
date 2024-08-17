@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tienda de Ropa</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#cart">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>¡Bienvenidos a nuestra tienda!</h2>
+        <p>Los mejores Hoodies del condau.</p>
+        <a href="#products" class="btn">Ver Productos</a>
+    </section>
+
+    <section id="products" class="products">
+        <h2>Nuestros Productos</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="luffy1.jpeg" alt="sudaderaLuffy">
+                <h3>Hoodie Monkey D. Luffy</h3>
+                <p>Q350.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Hoodie Monkey D. Luffy', 350.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="sudaderazoro.jpg" alt="sudaderazoro">
+                <h3>Hoodie Roronoa Zoro</h3>
+                <p>Q320.99</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Hoodie Roronoa Zoro', 320.99)">Añadir al Carrito</button>
+            </div>
+            <div class="product-item">
+                <img src="sudaderatony.jpg" alt="sudaderatony">
+                <h3>Hoodie Tony Tony Chopper</h3>
+                <p>Q400.00</p>
+                <button class="add-to-cart-btn" onclick="addToCart('Hoodie Tony Tony Chopper', 400.00)">Añadir al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart" class="cart">
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <p id="total">Total: Q0.00</p>
+        <button class="pay-btn" onclick="checkout()">Pagar</button>
+    </section>
+
+    <div class="comment-section">
+        <h2>Comentarios</h2>
+        <form class="comment-form" id="commentForm">
+            <input type="text" id="name" placeholder="Tu nombre" required>
+            <textarea id="comment" placeholder="Tu comentario" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        <ul class="comment-list" id="commentList">
+        <!-- Aquí se mostrarán los comentarios -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
