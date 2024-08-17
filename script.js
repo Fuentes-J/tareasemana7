@@ -39,10 +39,12 @@ document.getElementById('commentForm').addEventListener('submit', function(e) {
     commentItem.classList.add('comment-item');
     commentItem.textContent = `${name}: ${comment}`;
 
+    document.getElementById('name').value = '';
+    document.getElementById('comment').value = '';
+    
     // Agregar el comentario a la lista
     document.getElementById('commentList').appendChild(commentItem);
 
     // Limpiar el formulario
-    document.getElementById('name').value = '';
-    document.getElementById('comment').value = '';
+   
 });
